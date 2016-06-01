@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import unittest
 import numpy as np
-import moments as mo
+import Stats.moments as mo
 
 # ---------------
 # Defining Class
