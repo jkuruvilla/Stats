@@ -3,7 +3,7 @@ python:
   - "2.7"
   - "3.4"
 # command to install dependencies
-script: python tests/test_moments.py
+script: test_moments.py
 branches:
   only:
     - master
