@@ -95,6 +95,13 @@ class stat:
             _kurtosis = np.sum((((self.weights*(self.x_quantity - _mean))/float(_variance))**4))/float(np.sum(self.weights))
         return _kurtosis
 
+def statistic_measure_weigthed(a,w):
+    _mean = np.sum(a*w)/float(np.sum(w))
+    _variance = np.sqrt(np.sum(w*(a-_mean)**2)/float(np.sum(w)))
+    _skewness = np.sum(w*((a-_mean)/float(_variance))**3)/float(np.sum(w))
+    _kurtosis = np.sum(w*((a-_mean)/float(_variance))**4)/float(np.sum(w))
+    return _mean, _variance, _skewness, _kurtosis
+
 # --------------------
 #   Program  start
 # --------------------
