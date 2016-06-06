@@ -78,7 +78,7 @@ class stat:
             else:
                 raise Exception("Booo. Seems like you didn't give the right method.")
         else:
-            _skewness = np.sum((((self.weights*(self.x_quantity - _mean))/float(_variance))**3))/float(np.sum(self.weights))
+            _skewness = np.sum(self.weights*((self.x_quantity - _mean)/float(_variance))**3)/float(np.sum(self.weights))
         return _skewness
 
     def kurtosis(self):
@@ -92,7 +92,7 @@ class stat:
             else:
                 raise Exception("Booo. Seems like you didn't give the right method.")
         else:
-            _kurtosis = np.sum((((self.weights*(self.x_quantity - _mean))/float(_variance))**4))/float(np.sum(self.weights))
+            _kurtosis = np.sum(self.weights*((self.x_quantity - _mean)/float(_variance))**4)/float(np.sum(self.weights))
         return _kurtosis
 
 def statistic_measure_weigthed(a,w):
